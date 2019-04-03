@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Resizer IFrame Test</title>
+    <style>
+        iframe {
+            width: 1px;
+            min-width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <iframe id="myIframe" src="http://anotherdomain.com/iframe.html"></iframe>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/4.0.4/iframeResizer.contentWindow.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/4.0.4/iframeResizer.js"></script>
+    <!-- <script src="https://raw.githubusercontent.com/davidjbradshaw/iframe-resizer/master/js/iframeResizer.contentWindow.min.js"></script> -->
+    <!-- <script src="https://raw.githubusercontent.com/davidjbradshaw/iframe-resizer/master/js/iframeResizer.min.js"></script> -->
+    <script>
+        iFrameResize({ 
+            log: true,
+            enablePublicMethods: true, 
+            heightCalculationMethod : 'bodyScroll',
+        }, '#myIframe')
+    </script>
+</body>
+</html>
